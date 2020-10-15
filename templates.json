@@ -1,0 +1,273 @@
+{
+	"version": "2",
+	"templates": [
+		{
+			"categories": [
+				"demo"
+			],
+			"description": "AGR Web Client, Web API and Forecast Service",
+			"env": [
+				{
+					"label": "DB Server Name",
+					"name": "SERVER_NAME"
+				},
+				{
+					"default": "agr_prod",
+					"label": "DB Name",
+					"name": "DB_NAME"
+				},
+				{
+					"default": "sa",
+					"label": "DB User",
+					"name": "DB_USER"
+				},
+				{
+					"default": "myPass123#",
+					"label": "DB Password",
+					"name": "DB_Password"
+				},
+				{
+					"label": "Deploy PROD and STG DBs",
+					"name": "DB_DEPLOY",
+					"select": [
+						{
+							"text": "True",
+							"value": "true"
+						},
+						{
+							"default": true,
+							"text": "False",
+							"value": "false"
+						}
+					]
+				},
+				{
+					"label": "Deploy Demo ERP DB",
+					"name": "DB_DEPLOY_ERP",
+					"select": [
+						{
+							"default": true,
+							"text": "None",
+							"value": "none"
+						},
+						{
+							"text": "nav2009_lite_agn",
+							"value": "nav2009_lite_agn.dacpac"
+						},
+						{
+							"text": "nav2009_lite",
+							"value": "nav2009_lite.dacpac"
+						},
+						{
+							"text": "nav2009_full",
+							"value": "nav2009_full.dacpac"
+						},
+						{
+							"text": "erp_bm_lite",
+							"value": "erp_bm_lite.dacpac"
+						},
+						{
+							"text": "erp_bm_full",
+							"value": "erp_bm_full.dacpac"
+						}
+					]
+				},
+				{
+					"default": "DEMO_NAME.agr.local",
+					"label": "Demo URL",
+					"name": "VIRTUAL_HOST"
+				}
+			],
+			"image": "agrit:6.1",
+			"logo": "http://agrdynamics.com/wp-content/uploads/logo/logo-big@2x.png",
+			"network": "nginx-proxy",
+			"platform": "windows",
+			"ports": [
+				"80/tcp"
+			],
+			"restart_policy": "always",
+			"title": "AGR 6.1",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "C:\\docker-share\\rproxy",
+					"container": "C:\\rproxy"
+				},
+				{
+					"bind": "C:\\mario_share\\erp-dacpac",
+					"container": "C:\\agr\\dacpacs\\erp-dacpac"
+				}
+			]
+		},
+		{
+			"categories": [
+				"demo"
+			],
+			"description": "AGR Web Client, Web API and Forecast Service",
+			"env": [
+				{
+					"label": "DB Server Name",
+					"name": "SERVER_NAME"
+				},
+				{
+					"default": "agr_prod",
+					"label": "DB Name",
+					"name": "DB_NAME"
+				},
+				{
+					"default": "sa",
+					"label": "DB User",
+					"name": "DB_USER"
+				},
+				{
+					"default": "myPass123#",
+					"label": "DB Password",
+					"name": "DB_Password"
+				},
+				{
+					"label": "Deploy PROD and STG DBs",
+					"name": "DB_DEPLOY",
+					"select": [
+						{
+							"text": "True",
+							"value": "true"
+						},
+						{
+							"default": true,
+							"text": "False",
+							"value": "false"
+						}
+					]
+				},
+				{
+					"label": "Deploy Demo ERP DB",
+					"name": "DB_DEPLOY_ERP",
+					"select": [
+						{
+							"default": true,
+							"text": "None",
+							"value": "none"
+						},
+						{
+							"text": "nav2009_lite_agn",
+							"value": "nav2009_lite_agn.dacpac"
+						},
+						{
+							"text": "nav2009_lite",
+							"value": "nav2009_lite.dacpac"
+						},
+						{
+							"text": "nav2009_full",
+							"value": "nav2009_full.dacpac"
+						},
+						{
+							"text": "erp_bm_lite",
+							"value": "erp_bm_lite.dacpac"
+						},
+						{
+							"text": "erp_bm_full",
+							"value": "erp_bm_full.dacpac"
+						}
+					]
+				},
+				{
+					"default": "DEMO_NAME.agr.local",
+					"label": "Demo URL",
+					"name": "VIRTUAL_HOST"
+				}
+			],
+			"image": "agrit:6.0",
+			"logo": "http://agrdynamics.com/wp-content/uploads/logo/logo-big@2x.png",
+			"network": "nginx-proxy",
+			"platform": "windows",
+			"ports": [
+				"80/tcp"
+			],
+			"restart_policy": "always",
+			"title": "AGR 6.0",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "C:\\docker-share\\rproxy",
+					"container": "C:\\rproxy"
+				},
+				{
+					"bind": "C:\\mario_share\\erp-dacpac",
+					"container": "C:\\agr\\dacpacs\\erp-dacpac"
+				}
+			]
+		},
+		{
+			"categories": [
+				"demo"
+			],
+			"description": "MS SQL server",
+			"env": [
+				{
+					"default": "Y",
+					"name": "ACCEPT_EULA",
+					"preset": true
+				},
+				{
+					"default": "myPass123#",
+					"label": "SA Password",
+					"name": "SA_PASSWORD"
+				},
+				{
+					"default": "True",
+					"name": "MSSQL_AGENT_ENABLED",
+					"preset": true
+				},
+				{
+					"description": "Select Server Collation",
+					"label": "Server Collation",
+					"name": "MSSQL_COLLATION",
+					"select": [
+						{
+							"default": true,
+							"text": "SQL_Latin1_General_CP1_CI_AS",
+							"value": "SQL_Latin1_General_CP1_CI_AS"
+						},
+						{
+							"text": "Icelandic_CI_AS",
+							"value": "Icelandic_CI_AS"
+						},
+						{
+							"text": "Latin1_General_CI_AS",
+							"value": "Latin1_General_CI_AS"
+						}
+					]
+				},
+				{
+					"default": "DEMO_NAME.agr.local",
+					"label": "Demo URL",
+					"name": "VIRTUAL_HOST"
+				},
+				{
+					"default": "1433",
+					"name": "VIRTUAL_PORT",
+					"preset": true
+				}
+			],
+			"image": "helgiagr/sqlserver",
+			"logo": "https://cdn.worldvectorlogo.com/logos/microsoft-sql-server.svg",
+			"network": "nat",
+			"platform": "linux",
+			"ports": [
+				"1433/tcp"
+			],
+			"restart_policy": "always",
+			"title": "MS SQL server",
+			"type": 1,
+			"volumes": [
+				{
+					"container": "/var/opt/mssql/data"
+				},
+				{
+					"bind": "/var/snap/docker/common/var-lib-docker/volumes/ftpserver/_data",
+					"container": "/var/opt/mssql/data/backup"
+				}
+			]
+		}
+	]
+}
