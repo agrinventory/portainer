@@ -73,7 +73,7 @@
 					]
 				},
 				{
-					"default": "DEMO_NAME.agr.local",
+					"default": "DEMO_NAME.demo",
 					"label": "Demo URL",
 					"name": "VIRTUAL_HOST"
 				},
@@ -186,7 +186,7 @@
 					]
 				},
 				{
-					"default": "DEMO_NAME.agr.local",
+					"default": "DEMO_NAME.demo",
 					"label": "Demo URL",
 					"name": "VIRTUAL_HOST"
 				},
@@ -299,7 +299,7 @@
 					]
 				},
 				{
-					"default": "DEMO_NAME.agr.local",
+					"default": "DEMO_NAME.demo",
 					"label": "Demo URL",
 					"name": "VIRTUAL_HOST"
 				},
@@ -495,7 +495,7 @@
 					]
 				},
 				{
-					"default": "DEMO_NAME.agr.local",
+					"default": "DEMO_NAME.db.demol",
 					"label": "Demo URL",
 					"name": "VIRTUAL_HOST"
 				},
