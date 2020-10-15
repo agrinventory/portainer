@@ -327,7 +327,7 @@
 				"80/tcp"
 			],
 			"restart_policy": "always",
-			"title": "AGR 6.0-r5",
+			"title": "AGR 6.0",
 			"type": 1,
 			"volumes": [
 				{
