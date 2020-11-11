@@ -1,7 +1,231 @@
 {
 	"version": "2",
 	"templates": [
+		"categories": [
+				"demo"
+			],
+			"description": "AGR Web Client, Web API and Forecast Service",
+			"env": [
+				{
+					"label": "DB Server Name",
+					"name": "SERVER_NAME"
+				},
+				{
+					"default": "agr_prod",
+					"label": "DB Name",
+					"name": "DB_NAME"
+				},
+				{
+					"default": "sa",
+					"label": "DB User",
+					"name": "DB_USER"
+				},
+				{
+					"default": "myPass123#",
+					"label": "DB Password",
+					"name": "DB_Password"
+				},
+				{
+					"label": "Deploy PROD and STG DBs",
+					"name": "DB_DEPLOY",
+					"select": [
+						{
+							"text": "True",
+							"value": "true"
+						},
+						{
+							"default": true,
+							"text": "False",
+							"value": "false"
+						}
+					]
+				},
+				{
+					"label": "Deploy Demo ERP DB",
+					"name": "DB_DEPLOY_ERP",
+					"select": [
+						{
+							"default": true,
+							"text": "None",
+							"value": "none"
+						},
+						{
+							"text": "nav2009_lite_agn",
+							"value": "nav2009_lite_agn.dacpac"
+						},
+						{
+							"text": "nav2009_lite",
+							"value": "nav2009_lite.dacpac"
+						},
+						{
+							"text": "nav2009_full",
+							"value": "nav2009_full.dacpac"
+						},
+						{
+							"text": "erp_bm_lite",
+							"value": "erp_bm_lite.dacpac"
+						},
+						{
+							"text": "erp_bm_full",
+							"value": "erp_bm_full.dacpac"
+						}
+					]
+				},
+				{
+					"default": "DEMO_NAME.demo",
+					"label": "Demo URL",
+					"name": "VIRTUAL_HOST"
+				},
+				{
+					"default": "",
+					"label": "Responsible",
+					"name": "RESPONSIBLE"
+				},
+				{
+					"default": "",
+					"label": "Description",
+					"name": "DESCRIPTION"
+				},
+				{
+					"default": "",
+					"label": "Created by",
+					"name": "CREATED_BY"
+				}
+			],
+			"image": "agrit:r6.2-r0",
+			"logo": "http://agrdynamics.com/wp-content/uploads/logo/logo-big@2x.png",
+			"network": "nginx-proxy",
+			"platform": "windows",
+			"ports": [
+				"80/tcp"
+			],
+			"restart_policy": "always",
+			"title": "AGR 6.2-r0",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "C:\\docker-share\\rproxy",
+					"container": "C:\\rproxy"
+				},
+				{
+					"bind": "C:\\mario_share\\erp-dacpac",
+					"container": "C:\\agr\\dacpacs\\erp-dacpac"
+				}
+			]
+		},
 		{
+			"categories": [
+				"demo"
+			],
+			"description": "AGR Web Client, Web API and Forecast Service",
+			"env": [
+				{
+					"label": "DB Server Name",
+					"name": "SERVER_NAME"
+				},
+				{
+					"default": "agr_prod",
+					"label": "DB Name",
+					"name": "DB_NAME"
+				},
+				{
+					"default": "sa",
+					"label": "DB User",
+					"name": "DB_USER"
+				},
+				{
+					"default": "myPass123#",
+					"label": "DB Password",
+					"name": "DB_Password"
+				},
+				{
+					"label": "Deploy PROD and STG DBs",
+					"name": "DB_DEPLOY",
+					"select": [
+						{
+							"text": "True",
+							"value": "true"
+						},
+						{
+							"default": true,
+							"text": "False",
+							"value": "false"
+						}
+					]
+				},
+				{
+					"label": "Deploy Demo ERP DB",
+					"name": "DB_DEPLOY_ERP",
+					"select": [
+						{
+							"default": true,
+							"text": "None",
+							"value": "none"
+						},
+						{
+							"text": "nav2009_lite_agn",
+							"value": "nav2009_lite_agn.dacpac"
+						},
+						{
+							"text": "nav2009_lite",
+							"value": "nav2009_lite.dacpac"
+						},
+						{
+							"text": "nav2009_full",
+							"value": "nav2009_full.dacpac"
+						},
+						{
+							"text": "erp_bm_lite",
+							"value": "erp_bm_lite.dacpac"
+						},
+						{
+							"text": "erp_bm_full",
+							"value": "erp_bm_full.dacpac"
+						}
+					]
+				},
+				{
+					"default": "DEMO_NAME.demo",
+					"label": "Demo URL",
+					"name": "VIRTUAL_HOST"
+				},
+				{
+					"default": "",
+					"label": "Responsible",
+					"name": "RESPONSIBLE"
+				},
+				{
+					"default": "",
+					"label": "Description",
+					"name": "DESCRIPTION"
+				},
+				{
+					"default": "",
+					"label": "Created by",
+					"name": "CREATED_BY"
+				}
+			],
+			"image": "agrit:r6.1-r11",
+			"logo": "http://agrdynamics.com/wp-content/uploads/logo/logo-big@2x.png",
+			"network": "nginx-proxy",
+			"platform": "windows",
+			"ports": [
+				"80/tcp"
+			],
+			"restart_policy": "always",
+			"title": "AGR 6.1-r11",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "C:\\docker-share\\rproxy",
+					"container": "C:\\rproxy"
+				},
+				{
+					"bind": "C:\\mario_share\\erp-dacpac",
+					"container": "C:\\agr\\dacpacs\\erp-dacpac"
+				}
+			]
+		},
 			"categories": [
 				"demo"
 			],
