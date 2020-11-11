@@ -1,7 +1,8 @@
 {
 	"version": "2",
 	"templates": [
-		"categories": [
+		{
+			"categories": [
 				"demo"
 			],
 			"description": "AGR Web Client, Web API and Forecast Service",
