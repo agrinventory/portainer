@@ -206,7 +206,7 @@
 					"name": "CREATED_BY"
 				}
 			],
-			"image": "agrit/agr:r6.1-r11",
+			"image": "agrit/agr:6.1-r11",
 			"logo": "http://agrdynamics.com/wp-content/uploads/logo/logo-big@2x.png",
 			"network": "nginx-proxy",
 			"platform": "windows",
@@ -319,7 +319,7 @@
 					"name": "CREATED_BY"
 				}
 			],
-			"image": "agrit/agr:r6.1-r10",
+			"image": "agrit/agr:6.1-r10",
 			"logo": "http://agrdynamics.com/wp-content/uploads/logo/logo-big@2x.png",
 			"network": "nginx-proxy",
 			"platform": "windows",
